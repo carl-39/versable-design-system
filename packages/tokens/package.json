@@ -1,0 +1,9 @@
+{
+  "name": "@carl-39/versable-tokens",
+  "version": "0.1.0",
+  "description": "Canonical Versable design tokens.",
+  "publishConfig": { "registry": "https://npm.pkg.github.com", "access": "restricted" },
+  "files": ["dist", "README.md"],
+  "exports": { ".": "./dist/tokens.json", "./css": "./dist/tokens.css", "./metadata": "./dist/metadata.json" },
+  "scripts": { "build": "node scripts/build.mjs", "test": "node scripts/validate.mjs" }
+}

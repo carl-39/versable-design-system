@@ -1,0 +1,8 @@
+{
+  "name": "@carl-39/versable-docs",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": { "dev": "vite", "build": "tsc --noEmit && vite build", "typecheck": "tsc --noEmit" },
+  "dependencies": { "@carl-39/versable-react": "file:../../packages/react", "@carl-39/versable-tokens": "file:../../packages/tokens", "react": "^19.0.0", "react-dom": "^19.0.0" },
+  "devDependencies": { "@vitejs/plugin-react": "^4.0.0", "typescript": "^5.0.0", "vite": "^6.0.0" }
+}

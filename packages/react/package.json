@@ -1,0 +1,38 @@
+{
+  "name": "@carl-39/versable-react",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Accessible React components for the Versable Design System.",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
+  },
+  "files": [
+    "dist",
+    "styles.css",
+    "README.md"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./styles.css": "./styles.css"
+  },
+  "peerDependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "dependencies": {
+    "@carl-39/versable-tokens": "file:../tokens"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && tsup",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  }
+}

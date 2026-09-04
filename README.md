@@ -1,22 +1,28 @@
 # Versable Design System
 
-Open `index.html` locally to browse the guide. It requires no build step.
+Private design-system workspace for Versable's React web products. It turns the supplied 2025–26 visual identity into a reusable, accessible contract for learning and administrative interfaces.
 
-## Package
+## Packages
 
-- `tokens.json` is the platform-neutral source of truth.
-- `tokens.css` exposes implementation-facing CSS custom properties.
-- `index.html` and `styles.css` form the reference guide and component specimens.
-- `assets/` holds only supplied Versable source assets, including supplied font files.
+- `@carl-39/versable-tokens` - canonical DTCG-compatible source and generated CSS/JSON outputs.
+- `@carl-39/versable-react` - accessible React components and component styles.
+- `@carl-39/versable-docs` - executable documentation and live examples.
 
-## Adoption
+## Start
 
-Use primitive tokens only to create semantic aliases. Application components should consume semantic variables such as `--color-text-primary`, `--color-action-primary-default`, and `--space-4`, so visual changes stay centralized. Use `data-theme="dark"` only as an inverse/foundation layer until the dark theme is fully designed and tested.
+```sh
+npm install
+npm run build
+npm run test
+npm run dev -w @carl-39/versable-docs
+```
 
-## Fonts and licensing
+Import `@carl-39/versable-tokens/css` and `@carl-39/versable-react/styles.css`, then consume components from `@carl-39/versable-react`.
 
-Montserrat and Benton Modern Display Compact Italic came from the supplied brand archives. Confirm the organisation's font licences before deploying or redistributing them. The guide declares practical fallback stacks; teams without clearance can use those fallbacks until licensing is confirmed.
+## Release and accessibility
 
-## Brand decision
+Changesets control semantic versions: patch for compatible fixes, minor for compatible capability, major for breaking API or token changes. Components target WCAG 2.2 AA, but this repository does not claim whole-product conformance. See [CONTRIBUTING.md](CONTRIBUTING.md) for contribution, exception, and deprecation rules.
 
-The 2026 Versable Institute identity is authoritative. The older CRM screenshots inform information density and workflows, not palette, card colour, or control styling.
+## Asset and font licensing
+
+The supplied Montserrat, Benton Modern Display Compact Italic, logos, and icons remain private source assets. Confirm organisational licence rights before deploying them outside approved Versable products or changing repository visibility.

@@ -1,0 +1,2 @@
+import { defineConfig } from 'tsup';
+export default defineConfig({ entry: ['src/index.tsx'], format: ['esm', 'cjs'], dts: false, clean: false, external: ['react', 'react-dom'], outExtension({ format }) { return { js: format === 'cjs' ? '.cjs' : '.mjs' }; } });

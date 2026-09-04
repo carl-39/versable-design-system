@@ -1,0 +1,36 @@
+{
+  "name": "versable-design-system",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Versable's private design-system workspace.",
+  "packageManager": "npm@10.9.3",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @carl-39/versable-tokens && npm run build -w @carl-39/versable-react && npm run build -w @carl-39/versable-docs",
+    "test": "npm run test -w @carl-39/versable-tokens && npm run test -w @carl-39/versable-react",
+    "typecheck": "npm run typecheck -w @carl-39/versable-react && npm run typecheck -w @carl-39/versable-docs",
+    "changeset": "changeset",
+    "release": "changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.0",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
+    "@types/node": "^26.4.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "jest-axe": "^11.0.0",
+    "jsdom": "^29.1.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "tsup": "^8.5.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2",
+    "vitest": "^5.0.0"
+  }
+}
